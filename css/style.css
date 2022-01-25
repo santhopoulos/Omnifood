@@ -131,9 +131,38 @@
 }
 
 .step-img-box {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.step-img-box::after,
+.step-img-box::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: ""; /*to be displayed on  screen contnet property id needed even if epmty*/
+  display: block;
+  border-radius: 50%;
+
+  position: absolute;
+}
+
+/* We are using the 'before' and 'after' pseudo-elements because we dont want to pollute our html with visuals */
+.step-img-box::before {
+  width: 60%;
+  /*60% of parent's width             HACK              */
+  padding-bottom: 60%;
+  z-index: -2;
+  background-color: #fdf2e9;
+}
+
+.step-img-box::after {
+  width: 50%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: -1;
 }
 
 .step-number {
