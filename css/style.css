@@ -112,6 +112,33 @@
   color: #cf711f;
   font-weight: 700;
 }
+/**************************************/
+/* FEATURED IN SECTION  */
+/**************************************/
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem; /*using height to style them because it look way more natural. Width will ajust automatically (as long as we have not defined it it out html)*/
+  filter: brightness(0%);
+  opacity: 50%;
+}
 
 /**************************************/
 /* HOW IT WORKS SECTION  */
@@ -152,6 +179,7 @@
 /* We are using the 'before' and 'after' pseudo-elements because we dont want to pollute our html with visuals */
 .step-img-box::before {
   width: 60%;
+
   /*60% of parent's width             HACK              */
   padding-bottom: 60%;
   z-index: -2;
